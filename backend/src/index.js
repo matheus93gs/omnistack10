@@ -10,10 +10,6 @@ mongoose.connect('mongodb+srv://matheus:eryeiix4@cluster0-a6dw0.mongodb.net/test
 });
 
 app.use(express.json());
-
-app.post('/users', (request, response) => {
-    console.log(request.body);
-    return response.json({ message: 'Olar' });
-});
+app.use(routes);
 
 app.listen(3334);
